@@ -1,0 +1,150 @@
+/* =========================== Global Reset =========================== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #222;
+  color: #fff;
+  font-family: system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input {
+  width: 100%;
+  height: 50px;
+  outline: none;
+  border: none;
+  background: #111;
+  margin: 7px 0;
+  border-radius: 4px;
+  padding: 10px;
+  color: #fff;
+}
+
+input:focus {
+  background: #000;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  background: #470053;
+  color: #fff;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+button:hover {
+  background: #51025f;
+  letter-spacing: 1px;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+table th {
+  text-transform: uppercase;
+}
+
+th,
+td {
+  padding: 5px;
+}
+
+/* =========================== Crud Section =========================== */
+.crud {
+  width: 75%;
+  margin: auto;
+}
+/* =========================== Header =========================== */
+.head {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10px 0 20px;
+}
+/* =========================== inputs =========================== */
+.inputs button {
+  margin-top: 7px;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price input {
+  width: 20%;
+}
+
+#total {
+  /* background: #470053; */
+  background: crimson;
+  border-radius: 4px;
+  display: block;
+  padding: 15px;
+  flex-basis: 10%;
+  font-weight: bold;
+}
+
+#total::before {
+  content: "Total : ";
+}
+/* =========================== outputs =========================== */
+#delete {
+  background: crimson;
+}
+#delete:hover {
+  background: rgb(210, 31, 67);
+}
+.mainSearch {
+  margin: 12px 0;
+}
+.btnSearch {
+  display: flex;
+  justify-content: space-between;
+}
+.btnSearch button {
+  width: 45%;
+}
+
+#deleteAll {
+  margin: 20px 0;
+}
+/* =========================== Media Query =========================== */
+@media screen and (max-width: 768px) {
+  .crud {
+    width: 90%;
+  }
+  .tableWrapper {
+    overflow-x: scroll;
+  }
+  .price {
+    flex-direction: column !important;
+  }
+  .price input {
+    width: 100%;
+  }
+  #total {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  button {
+    font-size: 12px;
+  }
+}

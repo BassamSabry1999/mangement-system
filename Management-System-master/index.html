@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--===============  meta Tag ===============-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--===============  Header Theme ===============-->
+  <!-- <meta name="theme-color" content="#1877F2">  -->
+  <!--===============  Title of the page ===============-->
+  <title>Management System</title>
+
+  <!--=============== FAVICON ===============-->
+  <link rel="shortcut icon" href="system-update.ico" type="image/x-icon">
+  <!--=============== Main CSS ===============-->
+  <link rel="stylesheet" href="Css/main.css">
+
+
+</head>
+
+<body>
+
+  <main class="crud">
+    <div class="head">
+      <h2>Crud</h2>
+      <p>Product Managment System</p>
+    </div>
+
+    <form class="inputs">
+      <input type="text" id="title" placeholder="title">
+      <div class="price">
+        <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+        <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+        <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+        <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+        <small id="total"></small>
+      </div>
+
+      <input type="text" id="category" placeholder="category">
+      <input type="number" id="count" placeholder="count">
+      <button id="submit">Create</button>
+    </form>
+
+    <div class="outputs">
+      <div class="searchBlock">
+        <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="search" class="mainSearch">
+        <div class="btnSearch">
+          <button onclick="getSearchMood(this.id)" id="searchTitle">Search By Title</button>
+          <button onclick="getSearchMood(this.id)" id="searchCategory">Search By Category</button>
+        </div>
+      </div>
+
+      <div class="tableWrapper">
+        <div id="deleteAll">
+
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>title</th>
+              <th>price</th>
+              <th>taxes</th>
+              <th>ads</th>
+              <th>discount</th>
+              <th>total</th>
+              <th>category</th>
+              <th>update</th>
+              <th>delete</th>
+            </tr>
+          </thead>
+
+          <tbody id="tbody">
+          </tbody>
+
+        </table>
+      </div class="tableWrapper">
+    </div>
+
+
+  </main>
+
+
+
+
+  <!--=============== js ===============-->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
